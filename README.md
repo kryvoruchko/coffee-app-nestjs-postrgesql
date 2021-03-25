@@ -17,6 +17,9 @@ $ npm install
 ## Running the app
 
 ```bash
+# docker
+$ docker-compose up -d
+
 # development
 $ npm run start
 
@@ -25,11 +28,7 @@ $ npm run start:dev
 
 # production mode
 $ npm run start:prod
-```
 
-## Test
-
-```bash
 # unit tests
 $ npm run test
 
@@ -39,3 +38,20 @@ $ npm run test:e2e
 # test coverage
 $ npm run test:cov
 ```
+
+## Structure
+- [coffees](https://github.com/kryvoruchko/coffee-app-nestjs-postrgesql/tree/main/src/coffees)
+  - [dto](https://github.com/kryvoruchko/coffee-app-nestjs-postrgesql/tree/main/src/coffees/dto)
+  - [entities](https://github.com/kryvoruchko/coffee-app-nestjs-postrgesql/tree/main/src/coffees/entities)
+- [common](https://github.com/kryvoruchko/coffee-app-nestjs-postrgesql/tree/main/src/common)
+  - [decorators](https://github.com/kryvoruchko/coffee-app-nestjs-postrgesql/tree/main/src/common/decorators)
+  - [dto](https://github.com/kryvoruchko/coffee-app-nestjs-postrgesql/tree/main/src/common/dto)
+  - [filters](https://github.com/kryvoruchko/coffee-app-nestjs-postrgesql/tree/main/src/common/filters)
+  - [guards](https://github.com/kryvoruchko/coffee-app-nestjs-postrgesql/tree/main/src/common/guards)
+  - [interceptors](https://github.com/kryvoruchko/coffee-app-nestjs-postrgesql/tree/main/src/common/interceptors)
+  - [middlewares](https://github.com/kryvoruchko/coffee-app-nestjs-postrgesql/tree/main/src/common/moddleware)
+  - [pipes](https://github.com/kryvoruchko/coffee-app-nestjs-postrgesql/tree/main/src/common/pipes)
+- [config](https://github.com/kryvoruchko/coffee-app-nestjs-postrgesql/tree/main/src/config)
+- [database](https://github.com/kryvoruchko/coffee-app-nestjs-postrgesql/tree/main/src/database)
+- [events](https://github.com/kryvoruchko/coffee-app-nestjs-postrgesql/tree/main/src/events)
+- [migrations](https://github.com/kryvoruchko/coffee-app-nestjs-postrgesql/tree/main/src/migrations)
