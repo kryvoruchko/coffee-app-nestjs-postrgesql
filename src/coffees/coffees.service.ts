@@ -1,7 +1,6 @@
-import { Injectable, NotFoundException, Scope } from '@nestjs/common';
+import { Injectable, NotFoundException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { PaginationQueryDto } from 'src/common/dto/pagination-query.dto';
-// import { Event } from 'src/events/entities/event.entity';
 import { Connection, Repository } from 'typeorm';
 import { CreateCoffeeDto } from './dto/create-coffee.dto';
 import { UpdateCoffeeDto } from './dto/update-coffee.dto';
@@ -16,19 +15,7 @@ export class CoffeesService {
         @InjectRepository(Flavor)
         private readonly flavorRepository: Repository<Flavor>,
         private readonly connection: Connection,
-        // @Inject(COFFEE_BRANDS) coffeeBrands: string[],
-        // private readonly configService: ConfigService,
-        // @Inject(coffeesConfig.KEY)
-        // private readonly coffeesConfiguration: ConfigType<typeof coffeesConfig>
     ) {
-        // console.log(coffeesConfiguration);
-        // const coffeesConfig = this.configService.get('coffees');
-        // console.log(coffeesConfig);
-        // const databaseHost = this.configService.get('database.host');
-        // console.log(databaseHost);
-        // console.log('CoffeesService init');
-
-        // console.log(coffeeBrands);
     }
 
     findAll(paginationQuery: PaginationQueryDto) {
@@ -85,31 +72,6 @@ export class CoffeesService {
         const coffee = await this.findOne(id);
         return this.coffeeRepository.remove(coffee);
     }
-
-    // async recommendCoffee(coffee: Coffee) {
-    //     const queryRunner = this.connection.createQueryRunner();
-
-    //     await queryRunner.connect();
-    //     await queryRunner.startTransaction();
-
-    //     try {
-    //         coffee.recommendations++;
-
-    //         const recommendationsEvent = new Event();
-    //         recommendationsEvent.name = 'recommend_coffee';
-    //         recommendationsEvent.type = 'coffee';
-    //         recommendationsEvent.payload = { coffeeId: coffee.id };
-
-    //         await queryRunner.manager.save(coffee);
-    //         await queryRunner.manager.save(recommendationsEvent);
-
-    //         await queryRunner.commitTransaction();
-    //     } catch(err) {
-    //         await queryRunner.rollbackTransaction();
-    //     } finally {
-    //         await queryRunner.release();
-    //     }
-    // }
 
     private async preloadFlavorByName(name: string): Promise<Flavor> {
         const existingFlavor = await this.flavorRepository.findOne({ name });

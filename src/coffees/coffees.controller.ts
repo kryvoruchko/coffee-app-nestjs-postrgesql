@@ -10,7 +10,6 @@ import { PaginationQueryDto } from '../common/dto/pagination-query.dto';
 @ApiTags('coffees')
 @Controller('coffees')
 export class CoffeesController {
-    // @Inject(REQUEST) private readonly request: Request,
     constructor(
         private readonly coffeesService: CoffeesService,
     ) {
