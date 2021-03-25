@@ -1,6 +1,10 @@
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo_text.svg" height="100" alt="Nest Logo" /></a>
-  <a href="https://www.postgresql.org/" target="blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/1200px-Postgresql_elephant.svg.png" height="100" alt="PostgresQL Logo" /></a>
+</p>
+<p align="center">
+    <a href="https://www.postgresql.org/" target="blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/1200px-Postgresql_elephant.svg.png" height="100" alt="PostgresQL Logo" /></a>
+</p>
+<p align="center">
   <a href="https://hub.docker.com/" target="blank"><img src="https://timeweb.com/ru/community/article/8c/8cff847e5476455166bc8e4fc0778338.png" height="100" alt="Docker Logo" /></a>
 </p>
 
